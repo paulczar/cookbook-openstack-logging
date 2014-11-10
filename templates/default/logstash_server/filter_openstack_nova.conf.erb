@@ -1,8 +1,5 @@
 filter {
   if [type] == 'openstack' {
-    if [app] == 'glance' {
-      noop{}
-    }
     if [app] == 'nova' {
       noop{}
     }
