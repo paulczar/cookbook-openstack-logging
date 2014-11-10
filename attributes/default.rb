@@ -20,7 +20,8 @@ default['logstash']['instance']['server']['xmx'] = '1024M'
 default['logstash']['instance']['server']['workers'] = 2
 default['logstash']['instance']['server']['config_templates_cookbook'] = 'openstack-logging'
 default['logstash']['instance']['server']['config_templates'] = {
-  input_redis: 'logstash_server/input_redis.conf.erb',
-  filter_openstack: 'logstash_server/filter_openstack.conf.erb',
+  input_redis: 'logstash_server/input_tcp_openstack.conf.erb',
+  filter_openstack_nova: 'logstash_server/filter_openstack_nova.conf.erb',
+  filter_openstack_glance: 'logstash_server/filter_openstack_glance.conf.erb',
   output_elasticsearch: 'logstash_server/output_elasticsearch.conf.erb'
 }
